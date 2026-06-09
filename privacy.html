@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talder - Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 24px; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
+        h1 { font-size: 28px; margin-bottom: 4px; }
+        h2 { font-size: 20px; margin-top: 32px; color: #333; }
+        p { margin: 12px 0; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: May 5, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>Talder Inc. ("we", "us", "our") operates the Talder mobile application ("the App"). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our App.</p>
+    <p>By using Talder, you consent to the data practices described in this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect information you provide directly and information generated through your use of the App:</p>
+    <p><strong>Account Information:</strong><br>
+    • Email address (for registration and account recovery)<br>
+    • Username (publicly visible to friends)<br>
+    • Password (stored as a bcrypt hash — we never store plain text passwords)<br>
+    • Profile picture (optional, stored on Cloudflare R2)<br>
+    • Avatar color preference<br>
+    • Authentication provider (Email, Apple, Google, or TikTok)</p>
+    <p><strong>Communication Data:</strong><br>
+    • Text messages sent to friends<br>
+    • Voice messages and push-to-talk audio recordings<br>
+    • Images shared in conversations<br>
+    • Location data when you choose to share your location in chat</p>
+    <p><strong>Device and Usage Data:</strong><br>
+    • Device battery level and charging status (optional, user-controlled)<br>
+    • Online/offline status and last seen timestamp<br>
+    • App foreground/background state<br>
+    • Device push notification tokens (APNs)<br>
+    • Device language preference</p>
+    <p><strong>Music Activity:</strong><br>
+    • Currently playing song title, artist, and album artwork (when Spotify or Apple Music sharing is enabled)<br>
+    • Playback progress and duration</p>
+    <p><strong>Preferences and Settings:</strong><br>
+    • Theme, accent color, and chat background preferences<br>
+    • Privacy settings (friend request permissions, activity visibility, battery sharing)<br>
+    • Pinned conversations<br>
+    • Notification preferences</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the collected information to:</p>
+    <p>• Provide, maintain, and improve the App's functionality<br>
+    • Enable real-time communication between users (messaging, voice, PTT)<br>
+    • Send push notifications for messages, friend requests, and calls<br>
+    • Verify your identity and secure your account<br>
+    • Send transactional emails (account verification codes via SendGrid)<br>
+    • Process and verify premium subscription purchases<br>
+    • Display your online status and now playing information to your friends<br>
+    • Share your location with friends when you explicitly choose to do so<br>
+    • Detect and prevent abuse, fraud, and violations of our Terms of Service<br>
+    • Comply with legal obligations</p>
+
+    <h2>4. Data Storage and Security</h2>
+    <p>Your data is stored using the following infrastructure:</p>
+    <p>• Database: Turso (libSQL) — a distributed SQLite database with encrypted connections<br>
+    • Media Storage: Cloudflare R2 — for profile images, shared photos, and voice recordings<br>
+    • Server: Hosted on Render with WebSocket (WSS) encrypted connections</p>
+    <p><strong>Security Measures:</strong><br>
+    • Passwords are hashed using bcrypt before storage<br>
+    • All client-server communication uses encrypted WebSocket (WSS/TLS)<br>
+    • Premium transactions are verified using Apple's signed JWS cryptographic verification<br>
+    • Authentication tokens (JWT) are used for session management<br>
+    • Rate limiting is applied to prevent brute-force attacks on login, registration, and verification endpoints<br>
+    • Push notification tokens are stored in-memory only and not persisted to disk</p>
+    <p>While we implement industry-standard security measures, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+
+    <h2>5. Data Sharing and Disclosure</h2>
+    <p>We do not sell your personal data. We share information only in the following circumstances:</p>
+    <p><strong>With Your Friends:</strong><br>
+    • Your username, profile picture, online status, and avatar are visible to your friends.<br>
+    • Now playing information, battery level, and location are shared only when you enable these features.<br>
+    • Messages and voice communications are delivered to the intended recipients.</p>
+    <p><strong>Third-Party Service Providers:</strong><br>
+    • SendGrid (Twilio Inc.) — to send account verification emails. Only your email address is shared.<br>
+    • Cloudflare R2 — to store media files. Files are stored with unique identifiers, not linked to personal information.<br>
+    • Apple / Google — authentication data is processed by their sign-in services per their respective privacy policies.<br>
+    • Spotify AB — when you connect Spotify, now playing data is read locally from SPTAppRemote on your device. No data is sent to Spotify by us.</p>
+    <p><strong>Legal Requirements:</strong><br>
+    • We may disclose your information if required by law, regulation, legal process, or governmental request.<br>
+    • We may disclose information to protect our rights, safety, or property, or that of our users.</p>
+
+    <h2>6. Your Rights and Controls</h2>
+    <p><strong>Privacy Controls:</strong><br>
+    • Enable or disable friend request permissions<br>
+    • Show or hide your activity status<br>
+    • Control battery sharing (share with friends, hide, or disable entirely)<br>
+    • Enable or disable location sharing on a per-conversation basis<br>
+    • Connect or disconnect Spotify and Apple Music sharing</p>
+    <p><strong>Account Actions:</strong><br>
+    • Edit your profile information (username, avatar, profile picture) at any time<br>
+    • Block and unblock other users<br>
+    • Delete individual messages<br>
+    • Delete your account entirely, which removes your data from our servers</p>
+    <p><strong>Data Access:</strong><br>
+    • You may request a copy of your personal data by contacting us at the email provided below.</p>
+    <p>Under applicable data protection laws (including GDPR for EU residents), you may also have the right to: access your personal data, rectify inaccurate data, request erasure of your data, restrict or object to processing, and data portability.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>We retain your data for as long as your account is active or as needed to provide the service:</p>
+    <p>• Account data: Retained until you delete your account.<br>
+    • Messages: Retained on our servers to enable message history. Deleted messages are permanently removed.<br>
+    • Voice messages and images: Stored on Cloudflare R2 until the associated message is deleted or the account is closed.<br>
+    • Pending registration data: Automatically deleted after 24 hours if email verification is not completed.<br>
+    • Push notification tokens: Stored in server memory only; cleared when you disconnect or the server restarts.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Talder is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us immediately, and we will take steps to remove such information.</p>
+
+    <h2>9. Device Permissions</h2>
+    <p>Talder may request the following device permissions, each for a specific purpose:</p>
+    <p>• Microphone: Required for push-to-talk voice communication and recording voice messages.<br>
+    • Camera: Used to take profile pictures.<br>
+    • Photo Library: Used to select profile pictures and share images in chat.<br>
+    • Location (When In Use / Always): Used to share your real-time location with friends in chat. Location is only shared when you explicitly enable it.<br>
+    • Apple Music: Used to read your currently playing song for the Now Playing feature.<br>
+    • Notifications: Used to deliver message alerts, friend requests, and call notifications.<br>
+    • Background Modes: Audio (PTT), VoIP, push-to-talk, location updates, remote notifications, and background fetch are used to maintain real-time communication even when the App is in the background.</p>
+    <p>You can revoke any permission at any time through your device's Settings.</p>
+
+    <h2>10. International Data Transfers</h2>
+    <p>Your data may be processed and stored on servers located outside your country of residence. By using Talder, you consent to the transfer of your information to servers hosted by our infrastructure providers (Render, Cloudflare, Turso), which may operate in various jurisdictions.</p>
+    <p>We ensure that any such transfers comply with applicable data protection laws and that appropriate safeguards are in place.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the App or via email. Your continued use of Talder after changes are posted constitutes acceptance of the updated policy.</p>
+    <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your data.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at:</p>
+    <p>Talder Inc.<br>Email: talderapp@gmail.com</p>
+    <p>For GDPR-related inquiries, you may also contact your local data protection authority.</p>
+</body>
+</html>
